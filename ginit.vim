@@ -1,0 +1,1 @@
+Guifont InputNerdFont:h10
