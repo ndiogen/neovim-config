@@ -15,9 +15,13 @@ configure = function()
     set_option( 'b', 'shiftwidth', indent_size )
 
 
+    set_option( 'o', 'completeopt', 'menuone,noinsert,noselect' )
+
     -- Vim shortcuts
     vim.api.nvim_set_keymap('v', '/', [["-y/<C-R>-]],  {})
 
+    -- Vim autocomplete
+    vim.api.nvim_set_keymap('i', '<C-Space>', "<Plug>(completion_trigger)",  {})
 
     -- Buffers managment
     vim.api.nvim_set_keymap('n', '<C-b>j', ":bnext<CR>",   {})
